@@ -7,7 +7,6 @@ DROP TABLE IF EXISTS Bugs;
 DROP TABLE IF EXISTS BugStatus;
 DROP TABLE IF EXISTS Accounts;
 
-
 CREATE TABLE Accounts (
   account_id        BIGINT identity,
   account_name      VARCHAR(20),
@@ -47,15 +46,18 @@ CREATE TABLE Bugs (
 
 CREATE TABLE Comments (
   comment_id        BIGINT identity,
+  parent_id			BIGINT,
   bug_id            BIGINT NOT NULL,
   author            BIGINT NOT NULL,
   comment_date      DATETIME NOT NULL,
   comment           TEXT NOT NULL,
 
   CONSTRAINT PK_Comments PRIMARY KEY CLUSTERED (comment_id),
+  FOREIGN KEY (parent_id) REFERENCES Comments(comment_id),
   FOREIGN KEY (bug_id) REFERENCES Bugs(bug_id),
   FOREIGN KEY (author) REFERENCES Accounts(account_id),
 );
+CREATE NONCLUSTERED INDEX IDX_Comments_01 ON Comments (parent_id);
 
 CREATE TABLE Screenshots (
   bug_id            BIGINT NOT NULL,
@@ -86,3 +88,26 @@ CREATE TABLE BugsProducts(
   FOREIGN KEY (bug_id) REFERENCES Bugs(bug_id),
   FOREIGN KEY (product_id) REFERENCES Products(product_id)
 );
+
+
+insert into Accounts (account_name) values('Fran')
+insert into Accounts (account_name) values('Ollie')
+insert into Accounts (account_name) values('Kukla')
+GO
+
+insert into BugStatus values ('New')
+insert into BugStatus values ('Close')
+GO
+
+insert into Bugs (date_reported, reported_by) values (GETDATE(), 1)
+insert into Bugs (date_reported, reported_by) values (GETDATE(), 2)
+GO
+
+insert into Comments (parent_id, bug_id, author, comment_date, comment) values (NULL, 1, 1, GETDATE(), 'このバグの原因は何かな？');
+insert into Comments (parent_id, bug_id, author, comment_date, comment) values (1, 1, 2, GETDATE(), 'ヌルポインターのせいじゃない？');
+insert into Comments (parent_id, bug_id, author, comment_date, comment) values (2, 1, 1, GETDATE(), 'そうじゃないよ。それは確認済みだ。');
+insert into Comments (parent_id, bug_id, author, comment_date, comment) values (3, 1, 3, GETDATE(), '無効なインプットを調べてみたら？');
+insert into Comments (parent_id, bug_id, author, comment_date, comment) values (4, 1, 2, GETDATE(), 'そうか、バグの原因はそれだな。');
+insert into Comments (parent_id, bug_id, author, comment_date, comment) values (4, 1, 1, GETDATE(), 'よし、じゃあチェックして機能を追加してもらえるかな？');
+insert into Comments (parent_id, bug_id, author, comment_date, comment) values (6, 1, 3, GETDATE(), '了解。修正したよ。');
+insert into Comments (parent_id, bug_id, author, comment_date, comment) values (NULL, 2, 1, GETDATE(), 'What is this?');
