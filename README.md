@@ -24,3 +24,4 @@
 ## 資料
 
 * [第一回：ジェイウォーク](https://qiita.com/aconit96/items/24f790662d9b88a3ab74)
+* [第二回：ナイーブツリー](https://qiita.com/Nuits/items/ce554cbc3d26e9518bbe)
