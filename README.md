@@ -28,3 +28,4 @@
 * [第三回：IDリクワイアド](https://qiita.com/ayayo/items/ba38853bca0c2cc2acb7)
 * [第四回：キーレスエントリ](https://qiita.com/Nanakusajp/items/05f57caffa6462bae95a)
 * [第五回：エンティティ・アトリビュート・バリュー](https://qiita.com/skyc_lin/items/37365a36416d0dc42431)
+* [第六回：ポリモーフィック関連](https://qiita.com/dai329/items/1db8fbe37f43a465d801)
