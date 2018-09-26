@@ -27,3 +27,4 @@
 * [第二回：ナイーブツリー](https://qiita.com/Nuits/items/ce554cbc3d26e9518bbe)
 * [第三回：IDリクワイアド](https://qiita.com/ayayo/items/ba38853bca0c2cc2acb7)
 * [第四回：キーレスエントリ](https://qiita.com/Nanakusajp/items/05f57caffa6462bae95a)
+* [第五回：エンティティ・アトリビュート・バリュー](https://qiita.com/skyc_lin/items/37365a36416d0dc42431)
