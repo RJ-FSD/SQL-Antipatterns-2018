@@ -29,3 +29,4 @@
 * [第四回：キーレスエントリ](https://qiita.com/Nanakusajp/items/05f57caffa6462bae95a)
 * [第五回：エンティティ・アトリビュート・バリュー](https://qiita.com/skyc_lin/items/37365a36416d0dc42431)
 * [第六回：ポリモーフィック関連](https://qiita.com/dai329/items/1db8fbe37f43a465d801)
+* [第七回：マルチカラムアトリビュート](https://qiita.com/24be_yuuki/items/be2300419aee4d576324)
