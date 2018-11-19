@@ -31,4 +31,4 @@
 * [第六回：ポリモーフィック関連](https://qiita.com/dai329/items/1db8fbe37f43a465d801)
 * [第七回：マルチカラムアトリビュート](https://qiita.com/24be_yuuki/items/be2300419aee4d576324)
 * [第八回：メタデータトリブル](https://qiita.com/_kyam/items/ead506faa54f090f715c)
-* [第九回: ラウンディングエラー（丸め誤差)](https://qiita.com/BigA-aka-KATO/items/6e4dd30d3fba5a25774d)
+* [第九回：ラウンディングエラー（丸め誤差)](https://qiita.com/BigA-aka-KATO/items/6e4dd30d3fba5a25774d)
